@@ -1,23 +1,23 @@
-@extends('layouts.app', ['activePage' => 'sport', 'titlePage' => __('Sports List')])
+@extends('layouts.app', ['activePage' => 'team', 'titlePage' => __('Teams List')])
 
 @section('content')
   <div class="content">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" action="{{ route('sport.store') }}" autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{ route('team.store') }}" autocomplete="off" class="form-horizontal">
             @csrf
             @method('post')
 
             <div class="card ">
               <div class="card-header card-header-primary">
-                <h4 class="card-title">{{ __('Add Sport') }}</h4>
+                <h4 class="card-title">{{ __('Add Team') }}</h4>
                 <p class="card-category"></p>
               </div>
               <div class="card-body ">
                 <div class="row">
                   <div class="col-md-12 text-right">
-                      <a href="{{ route('sport.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
+                      <a href="{{ route('team.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
                   </div>
                 </div>
                 <div class="form-row">
@@ -28,18 +28,18 @@
                 </div>
                 <div class="row">
                   <div class="form-group col-md-3">
-                    <label for="inputTournament">Tournament</label>
-                    <select id="inputTournament" class="form-control" name="tournament_id">
-                      <option selected>Select Tournament</option>
-                      @foreach ($tournaments as $tournament)
-                        <option value="{{$tournament["id"]}}">{{$tournament["name"]}}</option>
+                    <label for="inputSport">Sports</label>
+                    <select id="inputSport" class="form-control" name="sport_id">
+                      <option selected>Select Sport</option>
+                      @foreach ($sports as $sport)
+                        <option value="{{$sport["id"]}},{{$sport["tournament_id"]}}">{{$sport["name"]}} - {{$sport->get_tournament_name()}}</option>
                       @endforeach
                     </select>
                   </div>
                 </div>
               </div>
               <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn btn-primary">{{ __('Add Sport') }}</button>
+                <button type="submit" class="btn btn-primary">{{ __('Add Team') }}</button>
               </div>
             </div>
           </form>

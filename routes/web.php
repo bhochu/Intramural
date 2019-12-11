@@ -23,16 +23,17 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('pages.table_list');
 	})->name('table');
   */
-  Route::get('team-list', function () {
+  /*Route::get('team-list', function () {
 		return view('pages.team_list');
 	})->name('team');
-
+*/
   /*Route::get('tournament-list', function () {
 		return view('pages.tournament_list');
 	})->name('tournament');
   */
   Route::resource('tournament', 'TournamentController');
   Route::resource('sport', 'SportController');
+  Route::resource('team', 'TeamController');
 
   Route::get('add-team', function () {
 		return view('pages.add_team');

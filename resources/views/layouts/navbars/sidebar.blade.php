@@ -54,7 +54,7 @@
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'team' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('team') }}">
+        <a class="nav-link" href="{{ route('team.index') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Teams') }}</p>
         </a>

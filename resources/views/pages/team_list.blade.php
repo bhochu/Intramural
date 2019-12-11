@@ -10,6 +10,7 @@
   <label class="radio-inline"><input type="radio" name="optradio" onclick="disp('basketball')">Basketball&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
   <label class="radio-inline"><input type="radio" name="optradio" onclick="disp('soccer')">Soccer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
   <label class="radio-inline"><input type="radio" name="optradio" onclick="disp('hockey')">Hockey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <button type="button" onclick="{{route('add_team')}}">Add New </button>
   </div>
 
     <div class="row">

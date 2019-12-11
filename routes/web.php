@@ -19,17 +19,26 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('table-list', function () {
+	/*Route::get('table-list', function () {
 		return view('pages.table_list');
 	})->name('table');
-
+  */
   Route::get('team-list', function () {
 		return view('pages.team_list');
 	})->name('team');
 
-  Route::get('tournament-list', function () {
+  /*Route::get('tournament-list', function () {
 		return view('pages.tournament_list');
 	})->name('tournament');
+  */
+  Route::resource('tournament', 'TournamentController');
+  Route::resource('sport', 'SportController');
+
+  Route::get('add-team', function () {
+		return view('pages.add_team');
+	})->name('add_team');
+
+  //Route::resource('add_team', 'TeamAddController');
 
 	Route::get('typography', function () {
 		return view('pages.typography');

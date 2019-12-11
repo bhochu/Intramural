@@ -42,13 +42,13 @@
         </div>
       </li>
       <li class="nav-item{{ $activePage == 'tournament' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('tournament') }}">
+        <a class="nav-link" href="{{ route('tournament.index') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Tournaments') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
+      <li class="nav-item{{ $activePage == 'sport' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('sport.index') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Sports') }}</p>
         </a>
@@ -57,6 +57,12 @@
         <a class="nav-link" href="{{ route('team') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Teams') }}</p>
+        </a>
+      </li>
+      <li class="nav-item{{ $activePage == 'add_team' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('add_team') }}">
+          <i class="material-icons">content_paste</i>
+            <p>{{ __('Add New Team') }}</p>
         </a>
       </li>
 <!--      <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">

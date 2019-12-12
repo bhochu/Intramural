@@ -36,10 +36,10 @@
                       {{ __('Name') }}
                     </th>
                     <th>
-                      {{ __('Team Name') }}
+                      {{ __('Student Id') }}
                     </th>
                     <th>
-                      {{ __('Sport Name') }}
+                      {{ __('Team Name') }}
                     </th>
 
                     <th class="text-right">

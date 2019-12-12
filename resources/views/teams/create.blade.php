@@ -32,7 +32,7 @@
                     <select id="inputSport" class="form-control" name="sport_id">
                       <option selected>Select Sport</option>
                       @foreach ($sports as $sport)
-                        <option value="{{$sport["id"]}},{{$sport["tournament_id"]}}">{{$sport["name"]}} - {{$sport->get_tournament_name()}}</option>
+                        <option value="{{$sport["id"]}}">{{$sport["name"]}} - {{$sport->get_tournament_name()}}</option>
                       @endforeach
                     </select>
                   </div>

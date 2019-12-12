@@ -59,10 +59,10 @@
             <p>{{ __('Teams') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'add_team' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('add_team') }}">
+      <li class="nav-item{{ $activePage == 'player' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('player.index') }}">
           <i class="material-icons">content_paste</i>
-            <p>{{ __('Add New Team') }}</p>
+            <p>{{ __('Add Player') }}</p>
         </a>
       </li>
 <!--      <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">

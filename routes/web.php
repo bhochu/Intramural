@@ -34,11 +34,12 @@ Route::group(['middleware' => 'auth'], function () {
   Route::resource('tournament', 'TournamentController');
   Route::resource('sport', 'SportController');
   Route::resource('team', 'TeamController');
+  Route::resource('player', 'PlayerController');
 
-  Route::get('add-team', function () {
+  /*Route::get('add-team', function () {
 		return view('pages.add_team');
 	})->name('add_team');
-
+*/
   //Route::resource('add_team', 'TeamAddController');
 
 	Route::get('typography', function () {

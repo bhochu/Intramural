@@ -10,7 +10,7 @@
               <div class="card-icon">
                 <i class="material-icons">content_copy</i>
               </div>
-              <a href="{{ route('tournament') }}">Tournaments</a>
+              <a href="{{ route('tournament.index') }}">Tournaments</a>
           <!--    <p class="card-category">Tournaments</p> -->
               <h3 class="card-title">2
               </h3>
@@ -28,7 +28,7 @@
               <div class="card-icon">
                 <i class="material-icons">content_copy</i>
               </div>
-              <a href="{{ route('table') }}">Sports</a>
+              <a href="{{ route('sport.index') }}">Sports</a>
             <!--  <p class="card-category">Sports</p> -->
               <h3 class="card-title">5
               </h3>
@@ -46,7 +46,7 @@
               <div class="card-icon">
                 <i class="material-icons">store</i>
               </div>
-              <a href="{{ route('team') }}">Teams</a>
+              <a href="{{ route('team.index') }}">Teams</a>
           <!--    <p class="card-category">Teams</p>  --
               <h3 class="card-title">15</h3>
             </div>
